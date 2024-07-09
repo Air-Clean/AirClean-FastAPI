@@ -84,7 +84,7 @@ async def insert_data(data: Data):
 
 
 @app.get("/water/quality")
-def getWaterQuality():
+def getWaterQuality(site_id: str):
     url = 'http://openapi.seoul.go.kr:8088/sample/xml/WPOSInformationTime/1/5/'
     response = requests.get(url)
     
@@ -93,7 +93,6 @@ def getWaterQuality():
         response.encoding = 'utf-8'
         data = xmltodict.parse(response.content)
         rows = data.get("WPOSInformationTime", {}).get("row", [])
-        site_id = '탄천'
         filtered_data = [row for row in rows if row.get("SITE_ID") == site_id]
         if filtered_data:
             evaluated_data = [evaluate_water_quality(row) for row in filtered_data]
