@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 # UTF-8 encoding when using korean
 def count(n, L, R, prices):
@@ -23,3 +24,15 @@ prices = list(map(int, input().split()))
 
 
 print(count(n,L,R,prices))
+=======
+def evaluate_water_quality(data):
+    evaluation = {}
+    if(data == 'a'):
+        evaluation['1'] = data
+        evaluation['2'] = data
+    else:
+        evaluation['2'] = data
+    print(evaluation)
+evaluate_water_quality('a');
+evaluate_water_quality('b');
+>>>>>>> 39dff41fc9fbdb9518f7a05e88404319d3f6f5fd
