@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # -*- coding: utf-8 -*-
 # UTF-8 encoding when using korean
 def count(n, L, R, prices):
@@ -24,7 +24,7 @@ prices = list(map(int, input().split()))
 
 
 print(count(n,L,R,prices))
-=======
+
 def evaluate_water_quality(data):
     evaluation = {}
     if(data == 'a'):
